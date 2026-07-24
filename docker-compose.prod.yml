@@ -1,0 +1,12 @@
+# ---------------------------------------------------------------------------
+# docker-compose.prod.yml -- Sobrescritura de produccion para el Frontend
+# ---------------------------------------------------------------------------
+
+services:
+  frontend:
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.25"
